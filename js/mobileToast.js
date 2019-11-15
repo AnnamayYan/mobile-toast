@@ -1,22 +1,30 @@
 /**
  *	消息提示框
- *	@param：
+ *	@param：{options}
  *		title：	String  '提示内容'	
  *		time:   Nubmer  '弹窗消失时间，默认2000ms'
  *		callback：Function '弹框消失之后的回调函数'
  *	
  **/
-function showToast(title, time = 2000, callback) {
+function showToast(options) {
+	if(!options.title) {
+		throw new Error('fail Title should be required.');
+	}
+	var opt = {
+		title: options.title,
+		time: options.time ? options.time : 2000,
+		callback: options.success
+	}
 	var dom = document.createElement('p');
 	dom.setAttribute('class', 'mobile-toast');
 	document.body.appendChild(dom);
-	dom.innerHTML = title;
+	dom.innerHTML = opt.title;
 
 	var clear = setTimeout(function(){
 		dom.parentNode.removeChild(dom);
 		clearTimeout(clear);
-		if (callback) {callback();}
-	}, time);
+		if (opt.callback) {opt.callback();}
+	}, opt.time);
 }
 
 /**

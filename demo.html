@@ -41,7 +41,12 @@
 
 			// 自动消失提示
 			$('.showToast').click(function(){
-				showToast('添加成功！');
+				showToast({
+					title: '自动消失提示',
+					success: function() {
+						console.log('弹框消失');
+					}
+				});
 			})
 
 			$('.showModal').click(function(){
