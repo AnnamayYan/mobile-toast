@@ -1,0 +1,16 @@
+.container{
+  padding: .2rem;
+  box-sizing: border-box;
+}
+.btn{
+  display: inline-block;
+  min-width: 1rem;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  border-radius: .08rem;
+  color:#fff;
+  background-color: #12BE73;
+  margin-right:.14rem;
+  padding:0 .1rem;
+}

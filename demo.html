@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	  <meta content="yes" name="apple-mobile-web-app-capable">
+	  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	  <meta content="telephone=no" name="format-detection">
+	  <meta content="email=no" name="format-detection">
+	  <link rel="stylesheet" href="css/public.css" />
+	  <link rel="stylesheet" href="css/mobileToast.css" />
+	  <link rel="stylesheet" href="css/delToast.css" />
+	  <script src='js/public.js'></script>
+		<title>提示框/弹窗</title>
+</head>
+<body>
+	<div class="container">
+		<div class="btn showDelToast">删除弹窗</div>
+		<div class="btn showToast">消息提示框</div>
+		<div class="btn showModal">模态对话框</div>
+	</div>
+
+	<script src="js/mobileToast.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		$(function(){
+			// 显示删除弹框
+			$('.showDelToast').on('click', function() {
+				var delToast = new dialog({
+					title: '确定删除此地址吗？',
+					success: function(res) {
+						if(res.confirm) {
+							console.log('用户点击确定');
+						} else {
+							console.log('用户点击了取消');
+						}
+					}
+				});
+			})
+
+			// 自动消失提示
+			$('.showToast').click(function(){
+				showToast('添加成功！');
+			})
+
+			$('.showModal').click(function(){
+				var modalDailog = new dialog({ 
+					title: '确定*****吗？',
+					confirmColor: 'green',
+					success: function(res) {
+						if(res.confirm) {
+							console.log('用户点击确定');
+						} else {
+							console.log('用户点击了取消');
+						}
+					}
+				});
+			})
+		})
+	</script>
+</body>
+</html>

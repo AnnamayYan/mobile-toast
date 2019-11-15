@@ -1,0 +1,98 @@
+html{
+    -webkit-text-size-adjust:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    font-family: Helvetica;
+    -webkit-overflow-scrolling:touch
+}
+body{font-size:12px;letter-spacing: .01rem;}
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin:0; padding:0; font-weight: normal;text-indent: 0;}
+/*a,button,input,textarea,select{ background: none; -webkit-tap-highlight-color:rgba(255,0,0,0); outline:none; -webkit-appearance:none;}*/
+em{font-style:normal}
+li{list-style:none}
+a{text-decoration:none;}
+img{border:none; vertical-align:top;}
+table{border-collapse:collapse;}
+textarea{ resize:none; overflow:auto;}
+a:hover{
+	text-decoration: none;
+}
+body{
+    font-size:.28rem;
+    font-family: "微软雅黑","宋体","思源黑体","Regular","Times New Roman",Georgia,Serif;
+    background-color: #F2F2F2;
+    color:#282828;
+}
+a{
+    color:#282828;
+}
+
+.lf{float: left;}
+.rf{float: right;}
+.clearfix:after{
+  content:'';
+  display: table;
+  clear: both;
+}
+.orange-jb{
+  background-color: #F2F2F2;
+}
+.orange-grad{
+  background-color:#326AE5 ;
+}
+.toast-box{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 80%;
+  z-index:6000;
+  display: none;
+}
+.toast-box p{
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: rgba(17, 17, 17, 0.6);
+  padding: .2rem .4rem;
+  border-radius: .1rem;
+  font-size: .28rem;
+  text-align: center;
+  max-width: 100%;
+  /*word-break: break-all;*/
+  /*white-space: normal;*/
+}
+/*toast弹窗 end*/
+
+.clamp1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clamp2{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.clamp3{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.right-arrow::after{
+  content:"";
+  width: .15rem;
+  height: .15rem;
+  border-top:.03rem solid #CAD3D2;
+  border-right:.03rem solid #CAD3D2;
+  transform: rotate(45deg);
+  position: absolute;
+  top:50%;
+  margin-top:-.08rem;
+  right:.2rem;
+}

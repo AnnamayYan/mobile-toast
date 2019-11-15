@@ -1,0 +1,62 @@
+.mobile-toast {
+	max-width: 66%;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.5);
+	border-radius: .1rem;
+	color: #fff;
+	text-align: center;
+	padding: .1rem .2rem;
+	line-height: .4rem;
+	box-sizing: border-box;
+}
+.modal-wrap{
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  text-align: center;
+  z-index: 5;
+}
+.modal-wrap .mask{
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+}
+.modal-wrap .content{
+  width: 6rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: .2rem;
+}
+.modal-wrap .top{
+  border-bottom: 1px solid #CECECF;
+  line-height: 1.87rem;
+  font-size: .36rem;
+  color:#000;
+}
+.modal-wrap .item{
+  width: 50%;
+  line-height: .92rem;
+  box-sizing: border-box;
+  font-size: .34rem;
+  color:rgba(0,0,0,.8);
+}
+.modal-wrap .item.confirm{
+	color:#E1151D;
+}
+.modal-wrap .item.confirm.width100 {
+  width: 100%;
+}
+.modal-wrap .item.cancle{
+  border-right:1px solid #CECECF;
+}
